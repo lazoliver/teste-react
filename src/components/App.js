@@ -1,5 +1,5 @@
 import React from 'react';
-import youtubeApi from '../../youtubeApi/youtubeApi'
+import youtubeApi from '../youtubeApi/youtubeApi'
 import SearchBar from './SearchBar';
 
 class App extends React.Component {
