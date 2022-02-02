@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="content-search">
                 <div className="search-bar">
                     <form onSubmit={this.handleSubmit}>
                         <div>
@@ -22,7 +22,7 @@ class SearchBar extends React.Component {
                         </div>
                     </form>
                 </div>
-            </>
+            </div>
         )
     };
 }

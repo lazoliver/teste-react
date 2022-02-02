@@ -1,6 +1,6 @@
 import React from 'react';
 import youtubeApi from '../../youtubeApi/youtubeApi'
-import SearchBar from '../SearchBar/SearchBar';
+import SearchBar from './SearchBar';
 
 class App extends React.Component {
   state = {
@@ -23,7 +23,6 @@ class App extends React.Component {
   render() {
     return(
       <div>
-        <h1>Hello World</h1>
         <SearchBar />
       </div>
     )
