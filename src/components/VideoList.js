@@ -6,7 +6,7 @@ const VideoList = ({videos, handleVideoSelect}) => {
         return <VideoItem key={video.id.videoId} video={video} handleVideoSelect={handleVideoSelect} />
     });
 
-    return <div>{renderedVideos}</div>
+    return <div className='video-list'>{renderedVideos}</div>
 };
 
 export default VideoList;

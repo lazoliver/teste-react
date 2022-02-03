@@ -2,7 +2,8 @@ import React from 'react';
 import youtubeApi from '../youtubeApi/youtubeApi'
 import SearchBar from './SearchBar';
 import VideoList from './VideoList';
-
+import VideoDetail from './VideoDetail';
+import '../styles/styles.css';
 class App extends React.Component {
   state = {
     videos: [],
@@ -17,8 +18,7 @@ class App extends React.Component {
 
     this.setState({
       videos: response.data.items
-    })
-    console.log(response);
+    });
   };
   handleVideoSelect = (video) => {
     this.setState({selectedVideo: video})
@@ -28,6 +28,9 @@ class App extends React.Component {
     return(
       <div>
         <SearchBar handleFormSubmit={this.handleSubmit} />
+        <div>
+          <VideoDetail video={this.state.selectedVideo} />
+        </div>
         <div>
           <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos} />
         </div>
