@@ -12,12 +12,16 @@ label {
     justify-content: center;
 }
 
+input {
+    background-color: #343a40;
+}
+
 @media (max-width: 480px) {
 
     body {
         width: 480px;
-        color: #fdfffc;
-        background-color: #0b090a;
+        color: #e9ecef;
+        background-color: #212529;
     }
 
     .home, .search, .video-card, .video-iframe {
@@ -35,13 +39,79 @@ label {
     }
 
     .video-card {
-        background-color: #011627;
-        border: solid 3px #03045e;
+        background-color: #343a40;
         border-radius: 6px;
         padding: 10px;
     }
 
     .video-iframe, .video-iframe-details, .video-item-title, .video-item-img, .video-item-description {
         padding: 10px 40px 10px 40px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 900px) {
+
+    body {
+        width: 900px;
+        color: #fdfffc;
+        background-color: #212529;
+    }
+
+    .home, .search, .video-card, .video-iframe {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    
+    .video-list {
+        width: 480px;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .video-item {
+        margin: 20px;
+    }
+
+    .video-card {
+        background-color: #343a40;
+        border-radius: 6px;
+        padding: 10px;
+    }
+
+    .video-card:hover{
+        background-color: #335577;
+    }
+    
+    .video-iframe {
+        width: 400px;
+    }
+
+    .video-iframe, .video-iframe-details, .video-item-title, .video-item-img, .video-item-description {
+        padding: 10px 40px 10px 40px;
+    }
+}
+
+@media (min-width: 900px) {
+    .video-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .video-item {
+        margin: 20px;
+    }
+
+    .video-card {
+        background-color: #343a40;
+        border-radius: 6px;
+        padding: 10px;
+    }
+
+    .video-card:hover{
+        background-color: #335577;
+    }
+
+    .video-iframe {
+        width: 400px;
     }
 }
