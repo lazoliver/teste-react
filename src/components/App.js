@@ -18,7 +18,7 @@ class App extends React.Component {
 
     this.setState({
       videos: response.data.items
-    });
+    }, console.log(response));
   };
   handleVideoSelect = (video) => {
     this.setState({selectedVideo: video})
@@ -26,7 +26,7 @@ class App extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="home">
         <SearchBar handleFormSubmit={this.handleSubmit} />
         <div>
           <VideoDetail video={this.state.selectedVideo} />

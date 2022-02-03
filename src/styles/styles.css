@@ -1,7 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-* {
+body {
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto' ,sans-serif;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+
+    body {
+        width: 480px;
+        color: #fdfffc;
+        background-color: #0b090a;
+    }
+
+    .home, .search, .video-card, .video-iframe {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    
+    .video-list {
+        padding: 10px 10px 10px 10px;
+    }
+
+    .video-item {
+        margin: 20px;
+    }
+
+    .video-card {
+        background-color: #011627;
+        border: solid 3px #03045e;
+        border-radius: 6px;
+        padding: 10px;
+    }
+
+    .video-iframe, .video-iframe-details, .video-item-title, .video-item-img, .video-item-description {
+        padding: 10px 40px 10px 40px;
+    }
 }
