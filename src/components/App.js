@@ -8,7 +8,6 @@ class App extends React.Component {
   state = {
     videos: [],
     selectedVideo: null,
-    className: ''
   }
   handleSubmit = async(textFromSearchBar) => {
     const response = await youtubeApi.get('/search', {
@@ -32,7 +31,7 @@ class App extends React.Component {
         <div className="iframe">
           <VideoDetail video={this.state.selectedVideo} />
         </div>
-        <div>
+        <div className='video-list-items'>
           <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos} />
         </div>
       </div>

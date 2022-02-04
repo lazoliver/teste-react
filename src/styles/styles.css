@@ -4,52 +4,84 @@ html, body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    width: 100%;
-    height: 100%;
-    color: #f8f9fa;
-    background-color: #212529;
+    color: #ffffff;
+    background-color: #131313;
 }
 
-.video-item:active, .video-item:hover {
-    background-color: #343a40;
+.video-item:hover, .video-item:active {
+    background-color: #270031;
 }
 
 @media (max-width: 480px) {
-    .home {
+    .home, .search, .iframe, .video-iframe, .video-iframe-details, .video-item, .video-item-card-details {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 100vh 0vh 0vh;
-    }
-    
-    .search {
-        min-width: 320px;
-        padding: 50px 9px 20px 10px;
-    }
-
-    .search, .search-label, .video-item-card, .video-item-card-details,  .video-iframe, .video-iframe-details, p {
-        display: flex;
-        flex-flow: column;
         justify-content: center;
         align-items: center;
     }
 
-    .video-list-items, .video-container {
-        display: grid;
-        grid-template-rows: 1fr;
-        padding: 50px 9px 20px 10px;
-        min-width: 320px;
+    .search {
+        min-height: 150px;
+    }
+
+    .iframe {
+        padding: 10px;
+    }
+
+    .video-container, .video-item {
+        border: solid 2px;
+        border-radius: 6px;
+        padding: 5px;
+    }
+
+    .video-iframe-details, .video-item {
+        max-width: 304px;
+    }
+
+    .video-list-items, .video-item {
+        padding: 20px;
     }
 
     .video-item {
+        max-width: 304px;
+        margin: 30px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .home, .search, .iframe, .video-iframe, .video-iframe-details, .video-item, .video-item-card-details {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        border: 3px solid #343a40;
-        border-radius: 6px;
-        margin: 10px
+        justify-content: center;
+        align-items: center;
     }
 
-    .video-item-card-details {
-        padding: 10px
+    .search {
+        min-height: 150px;
     }
+
+    .iframe {
+        padding: 10px;
+    }
+
+    .video-container, .video-item {
+        border: solid 2px;
+        border-radius: 6px;
+        padding: 10px;
+    }
+
+    .video-iframe-details, .video-item {
+        max-width: 304px;
+    }
+
+    .video-list-items, .video-item {
+        padding: 20px;
+    }
+
+    .video-item {
+        max-width: 304px;
+        margin: 40px
+    }
+}
+
+@media (min-width: 901px) {
+
 }
