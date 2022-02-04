@@ -7,7 +7,8 @@ import '../styles/styles.css';
 class App extends React.Component {
   state = {
     videos: [],
-    selectedVideo: null 
+    selectedVideo: null,
+    className: ''
   }
   handleSubmit = async(textFromSearchBar) => {
     const response = await youtubeApi.get('/search', {
@@ -28,7 +29,7 @@ class App extends React.Component {
     return(
       <div className="home">
         <SearchBar handleFormSubmit={this.handleSubmit} />
-        <div>
+        <div className="iframe">
           <VideoDetail video={this.state.selectedVideo} />
         </div>
         <div>
