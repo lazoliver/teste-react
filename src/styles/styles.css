@@ -6,6 +6,7 @@ html, body {
     padding: 0px;
     color: #ffffff;
     background-color: #131313;
+    font-family: 'Roboto';
 }
 
 .video-item:hover, .video-item:active {
